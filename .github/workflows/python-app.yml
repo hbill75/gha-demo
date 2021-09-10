@@ -34,3 +34,19 @@ jobs:
  #   - name: Test with pytest
 #    run: |
  #       pytest
+ 
+    - name: install libraries
+      run: sudo apt-get install fortune cowsay
+      
+    - name: Cow Say Moo
+      run: cowsay "hello, I'm a cow"
+      
+    - name: Format a quote
+      run: fortune | cowsay
+      
+    - name: Cowsay options
+      run: |
+        fortune | cowsay -f tux
+        fortune | cowsay -f stegosaurus
+        cowsay -l
+ 
